@@ -1,0 +1,21 @@
+<head></head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			{{> insertForm}}
+			{{> updateForm}}
+		</div>
+	</div>
+</body>
+
+<template name="insertForm">
+			<div class="col-xs-6">
+				{{> quickForm collection="Books" id="insertBookForm" validation="none" type="insert" buttonContent="Insert"}}
+			</div>
+</template>
+<template name="updateForm">
+			<div class="col-xs-6">
+				{{> quickForm collection="Books" doc=bookOne id="updateBookForm" validation="none" type="update" buttonContent="Update"}}
+			</div>
+</template>
